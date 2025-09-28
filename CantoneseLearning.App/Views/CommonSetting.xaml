@@ -12,7 +12,7 @@
             </Grid.ColumnDefinitions>          
 
             <Label VerticalOptions="Center" Grid.Row="0">启用日志</Label>
-            <CheckBox x:Name="chkEnableLog" Grid.Column="1" Grid.Row="4" CheckedChanged="chkEnableLog_CheckedChanged"></CheckBox>
+            <CheckBox x:Name="chkEnableLog" Grid.Column="1" Grid.Row="0" CheckedChanged="chkEnableLog_CheckedChanged"></CheckBox>
 
             <HorizontalStackLayout Grid.Row="1" Grid.ColumnSpan="2">
                 <Label VerticalOptions="Center" Grid.Row="5">拼音默认显示方案：</Label>
