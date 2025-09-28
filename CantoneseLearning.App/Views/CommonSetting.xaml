@@ -11,10 +11,7 @@
                 <ColumnDefinition Width="60"></ColumnDefinition>
             </Grid.ColumnDefinitions>          
 
-            <Label VerticalOptions="Center" Grid.Row="0">启用日志</Label>
-            <CheckBox x:Name="chkEnableLog" Grid.Column="1" Grid.Row="0" CheckedChanged="chkEnableLog_CheckedChanged"></CheckBox>
-
-            <HorizontalStackLayout Grid.Row="1" Grid.ColumnSpan="2">
+            <HorizontalStackLayout Grid.Row="0" Grid.ColumnSpan="2">
                 <Label VerticalOptions="Center" Grid.Row="5">拼音默认显示方案：</Label>
 
                 <Label VerticalOptions="Center" Grid.Row="5">广拼</Label>
@@ -22,7 +19,10 @@
 
                 <Label VerticalOptions="Center" Grid.Row="5">粤拼</Label>
                 <RadioButton x:Name="rbPinYinMode_YP"  VerticalOptions="Center" CheckedChanged="rbPinYinMode_CheckedChanged" Value="2"  GroupName="PinYinMode"></RadioButton>
-            </HorizontalStackLayout>    
+            </HorizontalStackLayout>
+
+			<Label VerticalOptions="Center" Grid.Row="1">启用日志</Label>
+			<CheckBox x:Name="chkEnableLog" Grid.Column="1" Grid.Row="1" CheckedChanged="chkEnableLog_CheckedChanged"></CheckBox>
             
         </Grid>        
        
