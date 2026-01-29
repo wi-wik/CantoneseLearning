@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace CantoneseLearning.App
+namespace viwik.CantoneseLearning.App
 {
     public class Program
     {

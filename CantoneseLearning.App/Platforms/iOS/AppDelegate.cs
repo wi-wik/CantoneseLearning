@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace CantoneseLearning.App
+namespace viwik.CantoneseLearning.App
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

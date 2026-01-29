@@ -1,5 +1,6 @@
 using viwik.CantoneseLearning.BLL.Core;
 using viwik.CantoneseLearning.BLL.Core.Model;
+using viwik.CantoneseLearning.BLL.MAUI.Helper;
 using viwik.CantoneseLearning.Model;
 
 namespace viwik.CantoneseLearning.App.Views;
@@ -73,7 +74,7 @@ public partial class TopicDetail : ContentPage
 
         var topicDetails = await DataProcessor.GetCantoneseTopicDetails(this.topic.Id, isFilterByTopic?  keyword: null);
 
-        var topicDetailMedias = await DataProcessor.GetVCantoneseTopicDetailMedias(this.topic.Id, isFilterByTitle? keyword: null);
+        var topicDetailMedias = await ImageHelper.DecorateMedias(await DataProcessor.GetVCantoneseTopicDetailMedias(this.topic.Id, isFilterByTitle? keyword: null));
 
         List<CantoneseTopicDetailMediaGroup> groups = new List<CantoneseTopicDetailMediaGroup>();
 

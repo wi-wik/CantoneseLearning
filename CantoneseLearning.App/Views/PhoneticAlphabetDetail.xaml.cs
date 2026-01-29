@@ -1,5 +1,6 @@
 using viwik.CantoneseLearning.BLL.Core;
 using viwik.CantoneseLearning.BLL.Core.Model;
+using viwik.CantoneseLearning.BLL.MAUI.Helper;
 using viwik.CantoneseLearning.BLL.MAUI.Manager;
 using viwik.CantoneseLearning.Model;
 
@@ -60,7 +61,7 @@ public partial class PhoneticAlphabetDetail : ContentPage
             this.lblDescription.Text = description;
             this.lblDescription.IsVisible = !string.IsNullOrEmpty(description);
 
-            var medias = await DataProcessor.GetVCantoneseVowelMedias(vowel.Id);             
+            var medias = await ImageHelper.DecorateMedias(await DataProcessor.GetVCantoneseVowelMedias(vowel.Id));             
 
             this.lvMedias.ItemsSource = medias;
         }

@@ -1,5 +1,6 @@
 using System.Xml.Linq;
 using viwik.CantoneseLearning.BLL.Core;
+using viwik.CantoneseLearning.BLL.MAUI.Helper;
 using viwik.CantoneseLearning.Model;
 
 namespace viwik.CantoneseLearning.App.Views;
@@ -43,7 +44,7 @@ public partial class Subject : ContentPage
         this.lblDescription.Text = subject.Description;
         this.lblDescription.IsVisible = !string.IsNullOrEmpty(subject.Description);
 
-        var medias = await DataProcessor.GetVCantoneseSubjectMedias(this.subjectId);
+        var medias = await ImageHelper.DecorateMedias(await DataProcessor.GetVCantoneseSubjectMedias(this.subjectId));
 
         this.lvMedias.ItemsSource = medias;
 

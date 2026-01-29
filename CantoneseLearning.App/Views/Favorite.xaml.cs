@@ -1,5 +1,6 @@
 using System.Windows.Input;
 using viwik.CantoneseLearning.BLL.Core;
+using viwik.CantoneseLearning.BLL.MAUI.Helper;
 using viwik.CantoneseLearning.Business.Model;
 
 namespace viwik.CantoneseLearning.App.Views;
@@ -31,7 +32,7 @@ public partial class Favorite : ContentPage
 
     private async void LoadData()
     {
-        var favorites = (await DataProcessor.GetVMediaFavorites()).OrderBy(item=>item.CategoryId).ThenByDescending(item => item.CreateTime);       
+        var favorites = await ImageHelper.DecorateMedias(((await DataProcessor.GetVMediaFavorites()).OrderBy(item=>item.CategoryId).ThenByDescending(item => item.CreateTime).ToList()));       
 
         List<MediaFavoriteGroup> groups = new List<MediaFavoriteGroup>();
 

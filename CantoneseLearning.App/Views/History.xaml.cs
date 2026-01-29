@@ -4,6 +4,7 @@ using System.Windows.Input;
 using viwik.CantoneseLearning.App.Controls;
 using viwik.CantoneseLearning.BLL.Core;
 using viwik.CantoneseLearning.BLL.Core.Model;
+using viwik.CantoneseLearning.BLL.MAUI.Helper;
 using viwik.CantoneseLearning.BLL.MAUI.Manager;
 using viwik.CantoneseLearning.Model;
 using zoft.MauiExtensions.Core.Extensions;
@@ -48,7 +49,7 @@ public partial class History : ContentPage, INotifyPropertyChanged
         {
             string name = "今天";
 
-            var items = todayHistories.Select(item => this.CreateVCantoneseMedia(item, name));
+            var items = await ImageHelper.DecorateMedias(todayHistories.Select(item => this.CreateVCantoneseMedia(item, name)).ToList());
 
             ObservableCollection<CantoneseMediaForEditing> collection = new ObservableCollection<CantoneseMediaForEditing>();
             collection.AddRange(items);
@@ -62,7 +63,7 @@ public partial class History : ContentPage, INotifyPropertyChanged
         {
             string name = "昨天";
 
-            var items = yesterdayHistories.Select(item => this.CreateVCantoneseMedia(item, name));
+            var items = await ImageHelper.DecorateMedias(yesterdayHistories.Select(item => this.CreateVCantoneseMedia(item, name)).ToList());
 
             ObservableCollection<CantoneseMediaForEditing> collection = new ObservableCollection<CantoneseMediaForEditing>();
             collection.AddRange(items);
@@ -76,7 +77,7 @@ public partial class History : ContentPage, INotifyPropertyChanged
         {
             string name = "更早";
 
-            var items = earlierHistories.Select(item => this.CreateVCantoneseMedia(item, null));
+            var items = await ImageHelper.DecorateMedias(earlierHistories.Select(item => this.CreateVCantoneseMedia(item, null)).ToList());
 
             ObservableCollection<CantoneseMediaForEditing> collection = new ObservableCollection<CantoneseMediaForEditing>();
             collection.AddRange(items);
