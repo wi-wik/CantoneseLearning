@@ -3,17 +3,17 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Authors>vi-wik</Authors>
     <PackageProjectUrl>https://github.com/vi-wik/CantoneseLearning</PackageProjectUrl>
     <Description>粤语学习实体模型类库</Description>
-    <AssemblyVersion>1.0.2</AssemblyVersion>
-    <FileVersion>1.0.2</FileVersion>
+    <AssemblyVersion>1.0.3</AssemblyVersion>
+    <FileVersion>1.0.3</FileVersion>
     <RepositoryUrl>https://github.com/vi-wik/CantoneseLearning</RepositoryUrl>
     <PackageId>viwik.$(AssemblyName)</PackageId>
     <AssemblyName>viwik.$(MSBuildProjectName)</AssemblyName>
     <RootNamespace>viwik.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
-    <PackageReleaseNotes>添加CantoneseEqualsMandarin</PackageReleaseNotes>
+    <PackageReleaseNotes>命名空间更正</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>

@@ -6,15 +6,15 @@
     <Platforms>AnyCPU;x64</Platforms>
     <AssemblyName>viwik.$(MSBuildProjectName)</AssemblyName>
     <RootNamespace>viwik.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <Authors>vi-wik</Authors>
     <Description>粤语学习数据访问层</Description>
     <PackageProjectUrl>https://github.com/vi-wik/CantoneseLearning</PackageProjectUrl>
     <RepositoryUrl>https://github.com/vi-wik/CantoneseLearning</RepositoryUrl>
-    <AssemblyVersion>1.0.3</AssemblyVersion>
-    <FileVersion>1.0.3</FileVersion>
+    <AssemblyVersion>1.0.4</AssemblyVersion>
+    <FileVersion>1.0.4</FileVersion>
     <PackageId>$(AssemblyName)</PackageId>
-    <PackageReleaseNotes>升级nuget包</PackageReleaseNotes>
+    <PackageReleaseNotes>命名空间更正</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
